@@ -10,9 +10,11 @@ namespace ConsoleApplication
     {
         static void Main(string[] args)
         {
-            string Name = "Marco Antonio Bustillos Quiroz";
-            string Location = "Ecuador";
-
+            string Name = "Marco Antonio Bustillos Quiroz" ;
+            string Location = "Ecuador" ;
+            Console.WriteLine( "My Name is: " + Name ) ;
+            Console.WriteLine( "I am from is: " + Location ) ;
+            Console.ReadKey();
         }
     }
 }
