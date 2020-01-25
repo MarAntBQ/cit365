@@ -29,16 +29,16 @@ namespace MegaDesk_Bustillos
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void DisplayQuote_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
         {
             MainMenu MenuFrm = new MainMenu();
             MenuFrm.Show();
             this.Hide();
-        }
-
-        private void DisplayQuote_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MegaDesk_Bustillos
 {
-    public partial class ViewAllQuotes : Form
+    public partial class SearchQuotes : Form
     {
-        public ViewAllQuotes()
+        public SearchQuotes()
         {
             InitializeComponent();
         }
@@ -28,10 +28,9 @@ namespace MegaDesk_Bustillos
                 return myCp;
             }
         }
-
-        private void ViewAllQuotes_Load(object sender, EventArgs e)
+        private void SearchQuotes_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         private void ReturnBtn_Click(object sender, EventArgs e)

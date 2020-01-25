@@ -34,25 +34,30 @@ namespace MegaDesk_Bustillos
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-           
-            //this.Close();
-            Application.Exit();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        private void ANQbtn_Click(object sender, EventArgs e)
         {
             AddQuote AQFORM = new AddQuote();
             AQFORM.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void VQbtn_Click(object sender, EventArgs e)
         {
-            ViewAllQuotes AQFORM = new ViewAllQuotes();
-            AQFORM.Show();
+            ViewAllQuotes VAQFORM = new ViewAllQuotes();
+            VAQFORM.Show();
             this.Hide();
+        }
+
+        private void SQbtn_Click(object sender, EventArgs e)
+        {
+            SearchQuotes SQFrm = new SearchQuotes();
+            SQFrm.Show();
+            this.Hide();
+        }
+
+        private void Exitbtn_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

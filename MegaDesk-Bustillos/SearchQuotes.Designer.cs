@@ -1,6 +1,6 @@
 ﻿namespace MegaDesk_Bustillos
 {
-    partial class ViewAllQuotes
+    partial class SearchQuotes
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewAllQuotes));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SearchQuotes));
             this.ReturnBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -44,20 +44,20 @@
             this.ReturnBtn.UseVisualStyleBackColor = false;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
-            // ViewAllQuotes
+            // SearchQuotes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(441, 274);
+            this.ClientSize = new System.Drawing.Size(417, 323);
             this.Controls.Add(this.ReturnBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "ViewAllQuotes";
+            this.Name = "SearchQuotes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MegaDesk - View All Quotes";
-            this.Load += new System.EventHandler(this.ViewAllQuotes_Load);
+            this.Text = "MegaDesk - Search Quotes";
+            this.Load += new System.EventHandler(this.SearchQuotes_Load);
             this.ResumeLayout(false);
 
         }
