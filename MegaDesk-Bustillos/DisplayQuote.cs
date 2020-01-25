@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace MegaDesk_Bustillos
 {
-    public partial class MainMenu : Form
+    public partial class DisplayQuote : Form
     {
-        public MainMenu()
+        public DisplayQuote()
         {
             InitializeComponent();
-        }
-        
-        private void MainMenu_Load(object sender, EventArgs e)
-        {
-
         }
 
         // DISABLE X BUTTON
@@ -34,25 +29,16 @@ namespace MegaDesk_Bustillos
             }
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-           
-            //this.Close();
-            Application.Exit();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-            AddQuote AQFORM = new AddQuote();
-            AQFORM.Show();
+            MainMenu MenuFrm = new MainMenu();
+            MenuFrm.Show();
             this.Hide();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void DisplayQuote_Load(object sender, EventArgs e)
         {
-            ViewAllQuotes AQFORM = new ViewAllQuotes();
-            AQFORM.Show();
-            this.Hide();
+
         }
     }
 }
