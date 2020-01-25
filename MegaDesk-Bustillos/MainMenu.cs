@@ -16,5 +16,24 @@ namespace MegaDesk_Bustillos
         {
             InitializeComponent();
         }
+        
+        private void MainMenu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+           
+            //this.Close();
+            Application.Exit();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            AddQuote AQFORM = new AddQuote();
+            AQFORM.Show();
+            this.Hide();
+        }
     }
 }
