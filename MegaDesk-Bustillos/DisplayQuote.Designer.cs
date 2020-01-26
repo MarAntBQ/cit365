@@ -43,7 +43,7 @@
             // 
             this.ReturnBtn.BackColor = System.Drawing.Color.Yellow;
             this.ReturnBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ReturnBtn.Location = new System.Drawing.Point(363, 203);
+            this.ReturnBtn.Location = new System.Drawing.Point(132, 177);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(106, 38);
             this.ReturnBtn.TabIndex = 1;
@@ -133,7 +133,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.HotTrack;
-            this.ClientSize = new System.Drawing.Size(483, 259);
+            this.ClientSize = new System.Drawing.Size(362, 227);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);

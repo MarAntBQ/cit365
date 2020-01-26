@@ -52,7 +52,7 @@
             this.ReturnBtn.Location = new System.Drawing.Point(403, 202);
             this.ReturnBtn.Name = "ReturnBtn";
             this.ReturnBtn.Size = new System.Drawing.Size(106, 38);
-            this.ReturnBtn.TabIndex = 0;
+            this.ReturnBtn.TabIndex = 8;
             this.ReturnBtn.Text = "Return";
             this.ReturnBtn.UseVisualStyleBackColor = false;
             this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
@@ -75,7 +75,7 @@
             this.textBox1.Location = new System.Drawing.Point(17, 38);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(493, 26);
-            this.textBox1.TabIndex = 2;
+            this.textBox1.TabIndex = 1;
             // 
             // widthInput
             // 
@@ -84,7 +84,7 @@
             this.widthInput.Location = new System.Drawing.Point(17, 92);
             this.widthInput.Name = "widthInput";
             this.widthInput.Size = new System.Drawing.Size(226, 26);
-            this.widthInput.TabIndex = 4;
+            this.widthInput.TabIndex = 2;
             this.widthInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IsInteger_KeyPress);
             this.widthInput.Validating += new System.ComponentModel.CancelEventHandler(this.WidthValidate);
             // 
@@ -106,7 +106,7 @@
             this.DepthInput.Location = new System.Drawing.Point(284, 92);
             this.DepthInput.Name = "DepthInput";
             this.DepthInput.Size = new System.Drawing.Size(226, 26);
-            this.DepthInput.TabIndex = 6;
+            this.DepthInput.TabIndex = 3;
             this.DepthInput.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.IsInteger_KeyPress);
             this.DepthInput.Validating += new System.ComponentModel.CancelEventHandler(this.DepthInput_Validating);
             // 
@@ -156,7 +156,7 @@
             this.comboBox1.Location = new System.Drawing.Point(284, 149);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(225, 28);
-            this.comboBox1.TabIndex = 10;
+            this.comboBox1.TabIndex = 5;
             // 
             // comboBox2
             // 
@@ -174,7 +174,7 @@
             this.comboBox2.Location = new System.Drawing.Point(18, 149);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(225, 28);
-            this.comboBox2.TabIndex = 11;
+            this.comboBox2.TabIndex = 4;
             // 
             // comboBox3
             // 
@@ -188,7 +188,7 @@
             this.comboBox3.Location = new System.Drawing.Point(18, 212);
             this.comboBox3.Name = "comboBox3";
             this.comboBox3.Size = new System.Drawing.Size(225, 28);
-            this.comboBox3.TabIndex = 13;
+            this.comboBox3.TabIndex = 6;
             // 
             // label6
             // 
@@ -208,7 +208,7 @@
             this.AddBtn.Location = new System.Drawing.Point(284, 202);
             this.AddBtn.Name = "AddBtn";
             this.AddBtn.Size = new System.Drawing.Size(106, 38);
-            this.AddBtn.TabIndex = 14;
+            this.AddBtn.TabIndex = 7;
             this.AddBtn.Text = "&Add";
             this.AddBtn.UseVisualStyleBackColor = false;
             this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);

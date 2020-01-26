@@ -63,13 +63,13 @@ namespace MegaDesk_Bustillos
                 }
                 else
                 {
-                    MessageBox.Show(width + " is not a integer valid, it should be between 24 and 96", "Message");
+                    MessageBox.Show(width + " is not a integer valid, it should be between 24 and 96", "MegaDesk");
                     widthInput.Text = "";
                     widthInput.Focus();
                 }
             } catch (Exception)
             {
-                MessageBox.Show("Your number is not an integer", "Message");
+                MessageBox.Show("Your number is not an integer", "MegaDesk");
                 widthInput.Text = "";
                 widthInput.Focus();
             }
@@ -108,14 +108,14 @@ namespace MegaDesk_Bustillos
                 }
                 else
                 {
-                    MessageBox.Show(depth + " is not a integer valid, it should be between 12 and 48", "Message");
+                    MessageBox.Show(depth + " is not a integer valid, it should be between 12 and 48", "MegaDesk");
                     widthInput.Text = "";
                     DepthInput.Focus();
                 }
             }
             catch (Exception)
             {
-                MessageBox.Show("Your number is not an integer", "Message");
+                MessageBox.Show("Your number is not an integer", "MegaDesk");
                 DepthInput.Text = "";
                 DepthInput.Focus();
             }
@@ -125,8 +125,13 @@ namespace MegaDesk_Bustillos
         {
             DisplayQuote DQFrm = new DisplayQuote();
             DQFrm.label1.Text = "Customer Name: " + textBox1.Text;
+            DQFrm.label3.Text = "Width: " + widthInput.Text;
+            DQFrm.label4.Text = "Depth: " + DepthInput.Text;
+            DQFrm.label5.Text = "Drawers: " + comboBox2.Text;
+            DQFrm.label6.Text = "Material: " + comboBox1.Text;
+            DQFrm.label7.Text = "Processing Time: " + comboBox3.Text + " Days";
             DQFrm.Show();
-            //this.Hide();
+            this.Hide();
         }
     }
 }
