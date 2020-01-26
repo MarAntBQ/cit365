@@ -40,5 +40,93 @@ namespace MegaDesk_Bustillos
             MenuFrm.Show();
             this.Hide();
         }
+
+        static bool isNumber(string s)
+        {
+            for (int i = 0; i < s.Length; i++)
+                if (char.IsDigit(s[i]) == false)
+                    return false;
+
+            return true;
+        }
+        private void WidthValidate(object sender, CancelEventArgs e)
+        {
+
+            int width;
+            
+            try
+            {
+                width = Convert.ToInt32(widthInput.Text);
+                if (width >= 24 && width <= 96)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show(width + " is not a integer valid, it should be between 24 and 96", "Message");
+                    widthInput.Text = "";
+                    widthInput.Focus();
+                }
+            } catch (Exception)
+            {
+                MessageBox.Show("Your number is not an integer", "Message");
+                widthInput.Text = "";
+                widthInput.Focus();
+            }
+            
+            
+
+            
+
+        }
+
+        private void IsInteger_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+        (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+
+        private void DepthInput_Validating(object sender, CancelEventArgs e)
+        {
+            int depth;
+
+            try
+            {
+                depth = Convert.ToInt32(DepthInput.Text);
+                if (depth >= 12 && depth <= 48)
+                {
+
+                }
+                else
+                {
+                    MessageBox.Show(depth + " is not a integer valid, it should be between 12 and 48", "Message");
+                    widthInput.Text = "";
+                    DepthInput.Focus();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Your number is not an integer", "Message");
+                DepthInput.Text = "";
+                DepthInput.Focus();
+            }
+        }
+
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            DisplayQuote DQFrm = new DisplayQuote();
+            DQFrm.label1.Text = "Customer Name: " + textBox1.Text;
+            DQFrm.Show();
+            //this.Hide();
+        }
     }
 }
