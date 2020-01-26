@@ -109,7 +109,7 @@ namespace MegaDesk_Bustillos
                 else
                 {
                     MessageBox.Show(depth + " is not a integer valid, it should be between 12 and 48", "MegaDesk");
-                    widthInput.Text = "";
+                    DepthInput.Text = "";
                     DepthInput.Focus();
                 }
             }
