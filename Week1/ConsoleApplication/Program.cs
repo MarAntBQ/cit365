@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,6 +47,12 @@ namespace ConsoleApplication
             woodLength + " feet");
             Console.WriteLine("The area of the glass is " +
             glassArea + " square metres");
+            ArrayList theBooks = new ArrayList();
+            theBooks.Add("Nephi");
+            theBooks.Add("Jacob");
+            theBooks.Add("Alma");
+            theBooks.Add("Moroni");
+            Console.WriteLine("Count: {0}", theBooks.Count);
             //Avoid ending app
             Console.ReadKey();
         }

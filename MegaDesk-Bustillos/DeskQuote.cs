@@ -9,4 +9,6 @@ namespace MegaDesk_Bustillos
     class DeskQuote
     {
     }
+
+    
 }
