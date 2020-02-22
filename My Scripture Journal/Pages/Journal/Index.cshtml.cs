@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using My_Scripture_Journal.Data;
 using My_Scripture_Journal.Models;
@@ -20,10 +21,31 @@ namespace My_Scripture_Journal
         }
 
         public IList<Scripture> Scripture { get;set; }
-
+        [BindProperty(SupportsGet = true)]
+        public string SearchString { get; set; }
+        // Requires using Microsoft.AspNetCore.Mvc.Rendering;
+        public SelectList Book { get; set; }
+        [BindProperty(SupportsGet = true)]
+        public string BookName { get; set; }
         public async Task OnGetAsync()
         {
-            Scripture = await _context.Scripture.ToListAsync();
+            // Use LINQ to get list of genres.
+            IQueryable<string> bookQuery = from m in _context.Scripture
+                                            orderby m.Book
+                                            select m.Book;
+            var notes = from m in _context.Scripture
+                         select m;
+            if (!string.IsNullOrEmpty(SearchString))
+            {
+                notes = notes.Where(s => s.Note.Contains(SearchString));
+            }
+            if (!string.IsNullOrEmpty(BookName))
+            {
+                notes = notes.Where(x => x.Book == BookName);
+            }
+            //Scripture = await _context.Scripture.ToListAsync();
+            Book = new SelectList(await bookQuery.Distinct().ToListAsync());
+            Scripture = await notes.ToListAsync();
         }
     }
 }
