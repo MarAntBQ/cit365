@@ -29,6 +29,7 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2003-01-31"),
                         Genre = "Comedy",
                         Rating = "G",
+                        Image = "therm.jpg",
                         Price = 7.99M
                     },
 
@@ -38,6 +39,7 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2001-12-14"),
                         Genre = "Adventure Drama",
                         Rating = "G",
+                        Image = "otherside.jpg",
                         Price = 8.99M
                     },
 
@@ -47,6 +49,7 @@ namespace MvcMovie.Models
                         ReleaseDate = DateTime.Parse("2014-10-10"),
                         Genre = "Documentary",
                         Rating = "G",
+                        Image = "meetthemormons.jpg",
                         Price = 9.99M
                     }
                 );

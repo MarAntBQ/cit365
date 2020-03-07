@@ -27,7 +27,7 @@ namespace MvcMovie.Models
         [Display(Name = "Movie Image")]
         public string Image { get; set; }
 
-        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), StringLength(5)]
+        [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$"), Required, StringLength(5)]
         public string Rating { get; set; }
     }
 }
