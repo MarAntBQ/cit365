@@ -39,6 +39,22 @@
                 <span asp-validation-for="Genre" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Image" class="control-label"></label>
+                <select asp-for="Image" name="image" class="form-control">
+                    <option value="nopic.jpg">No Picture</option>
+                    <option value="17miracles.jpg">17 Miracles</option>
+                    <option value="descent.jpg">The Last Descent</option>
+                    <option value="ephraim.jpg">Ephraim's Rescue</option>
+                    <option value="justlet.jpg">Just Let Go</option>
+                    <option value="kennedy.jpg">Love, Kennedy</option>
+                    <option value="meetthemormons.jpg">Meet the Mormons</option>
+                    <option value="otherside.jpg">The Other Side of Heaven</option>
+                    <option value="thebesttwoyears.jpg">The Best Two Years</option>
+                    <option value="therm.jpg">The RM</option>
+                </select>
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Price" class="control-label"></label>
                 <input asp-for="Price" class="form-control" />
                 <span asp-validation-for="Price" class="text-danger"></span>
