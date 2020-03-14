@@ -19,11 +19,28 @@ namespace ContosoUniversity.Controllers
             _context = context;
         }
 
-        public async Task<IActionResult> Index(string sortOrder, string searchString)
+        // GET: Students
+        public async Task<IActionResult> Index(
+            string sortOrder,
+            string currentFilter,
+            string searchString,
+            int? pageNumber)
         {
+            ViewData["CurrentSort"] = sortOrder;
             ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
             ViewData["DateSortParm"] = sortOrder == "Date" ? "date_desc" : "Date";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
             ViewData["CurrentFilter"] = searchString;
+
             var students = from s in _context.Students
                            select s;
             if (!String.IsNullOrEmpty(searchString))
@@ -46,7 +63,9 @@ namespace ContosoUniversity.Controllers
                     students = students.OrderBy(s => s.LastName);
                     break;
             }
-            return View(await students.AsNoTracking().ToListAsync());
+
+            int pageSize = 3;
+            return View(await PaginatedList<Student>.CreateAsync(students.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         // GET: Students/Details/5
@@ -58,10 +77,11 @@ namespace ContosoUniversity.Controllers
             }
 
             var student = await _context.Students
-        .Include(s => s.Enrollments)
-            .ThenInclude(e => e.Course)
-        .AsNoTracking()
-        .FirstOrDefaultAsync(m => m.ID == id);
+                 .Include(s => s.Enrollments)
+                     .ThenInclude(e => e.Course)
+                 .AsNoTracking()
+                 .FirstOrDefaultAsync(m => m.ID == id);
+
             if (student == null)
             {
                 return NotFound();
@@ -81,16 +101,17 @@ namespace ContosoUniversity.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("EnrollmentDate,FirstMidName,LastName")] Student student)
+        public async Task<IActionResult> Create(
+            [Bind("EnrollmentDate,FirstMidName,LastName")] Student student)
         {
             try
             {
                 if (ModelState.IsValid)
-            {
-                _context.Add(student);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+                {
+                    _context.Add(student);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
             catch (DbUpdateException /* ex */)
             {
