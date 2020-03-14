@@ -2,7 +2,7 @@
 
 namespace ContosoUniversity.Migrations
 {
-    public partial class Migration1 : Migration
+    public partial class ComplexDataModel3 : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
