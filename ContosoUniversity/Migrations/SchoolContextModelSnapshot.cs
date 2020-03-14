@@ -63,7 +63,6 @@ namespace ContosoUniversity.Migrations
 
                     b.Property<string>("FirstMidName")
                         .IsRequired()
-                        .HasColumnName("FirstName")
                         .HasMaxLength(50);
 
                     b.Property<string>("LastName")
